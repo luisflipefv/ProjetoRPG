@@ -3,12 +3,14 @@ package dev.luisf.ProjetoRPG.Item;
 import dev.luisf.ProjetoRPG.Inventario.InventarioModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_item")
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class ItemModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

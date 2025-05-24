@@ -29,6 +29,5 @@ public class InventarioModel {
     private PersonagemModel personagem;
 
     @OneToMany(mappedBy = "inventario", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn
     private List<ItemModel> itens = new ArrayList<>();
 }
