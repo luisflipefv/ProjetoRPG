@@ -23,7 +23,7 @@ public class InventarioService {
     }
 
     //Adiciona item no inventario
-    public ItemModel adicionaItemAoInventario(Long idInventario, ItemModel novoItem){
+    public ItemModel adicionaItemInventario(Long idInventario, ItemModel novoItem){
         return inventarioRepository.findById(idInventario).map(inventario -> {
             if (inventario.getItens().size() >= inventario.getCapacidadeMaxima()) {
                 System.out.println("Inventário cheio! Não foi possível adicionar o item ao inventario");
